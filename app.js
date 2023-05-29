@@ -34,3 +34,45 @@ console.log(arrayPlusArray(foo, bar))
 // }
 
 // console.log(basicOp('-', 3,4))
+
+
+
+
+// 3-HOMEWORK
+
+const form = document.querySelector('#validation')
+      NumInput = document.querySelector('#validation__price')
+      StrInput = document.querySelector('#validation__product')
+      menuPush = document.querySelector('.wrapper')
+
+      let title = document.querySelector('.title')
+      let smthText = document.querySelector('.smthText')
+
+  let chai = 0
+
+form.addEventListener('submit', (e)=>{
+  e.preventDefault();
+
+function result() {
+
+  let NumiVal = NumInput.value,
+  StriVal = StrInput.value;
+  
+let elementLi = document.createElement("li")
+elementLi.textContent = `${StriVal}: ${NumiVal}`
+menuPush.appendChild(elementLi)
+
+let bar = Number(NumiVal)
+
+chai += bar
+smthText.textContent = `totalPrice: ${chai.toFixed(3)} so'm`
+
+  NumiVal = ""
+  StriVal = ""
+
+
+}
+
+result()
+
+})
